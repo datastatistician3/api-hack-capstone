@@ -11,29 +11,30 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
     <script src="script.js"></script>
-<!-- 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
-
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-     -->
-
 
 </head>
 
 <body>
-        <div id="tbl-food">
-
+    <div class="wrapper">
+      <h1>Identify Food Ingredients!</h1>
+  
+      <form action="#">
+        <input type="file" id="filename" placeholder="Filename" size="100"/>
+        <button id="submit-button" type="submit">Submit to Identify Food Ingredients!</button>
+      </form>
+  
+      <div id="predictions">
+        <div class="food-photo">
+          <div class="step"><span>1</span> Uploaded Image</div>
+          <img id="myImg" src="#" alt="your image" />
         </div>
-
-        <table id="example" class="display" width="100%"></table>
-
         <div class="nutrition">
-                <div class="step"><span>2</span> Get a Nutritional Breakdown</div>
-                <div id="concepts"></div>
-
-                <img id='myImg" alt=">
-
+          <div class="step"><span>2</span>Results</div>
+          <div id="concepts"></div>
         </div>
-</body>
+      </div>
+    </div>
+
+  </body>
 
 </html>

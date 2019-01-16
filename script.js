@@ -24,14 +24,42 @@ function getPreditedData() {
       let foodItemURL = nutrientURL + oneItem + '%20nutrition%20facts&appid='+nutrientAPI;
       console.log(foodItemURL)
 
-        $('#concepts').html('<h3>'+ oneItem + '</h3>')
-        $('#myImg').html(`<img src='"${foodItemURL}"'>`);
-
       // getNutritionalInfo(foodItemURL, function (result) {
       //   $('#concepts').html('<h3>'+ oneItem + '</h3>') + "<img src='"+foodItemURL+"'>");
       // });
     }, function(err){console.log(err)})
 };
+
+// function getImage() {
+//   let file = $(':file').files[0];
+//   let reader = new FileReader();
+
+//   if (file) {
+//     reader.readAsDataURL(this.files[0]);
+//     reader.onload = function imageIsLoaded(e) {
+//       $('#myImg').attr('src', e.target.result);
+//     };
+//   }
+// }
+function getImage() {
+  $(":file").change(function () {
+      if (this.files && this.files[0]) {
+          var reader = new FileReader();
+          reader.onload = imageIsLoaded;
+      }
+  });
+};
+
+function imageIsLoaded(e) {
+  $('#myImg').attr('src', e.target.result);
+};
+
+// function submitImage() {
+//   $('#submit-button').click(function (e){
+//     e.preventDefault();
+//     getImage()
+//   })
+// }
 
 
 // function makeTable() {
@@ -59,9 +87,10 @@ function getPreditedData() {
 //   );
 // }
 
-
-
-$(getPreditedData)
+$(function(){
+  $(getImage)
+  $(getPreditedData)  
+})
 
 
 // $(function(){

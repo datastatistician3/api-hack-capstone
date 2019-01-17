@@ -1,4 +1,5 @@
-#id-food {
-    left: 20px;
-    margin-top: 20%;
+table {
+  border-collapse: collapse;
+  text-align: left;
+  left: 50px;
 }

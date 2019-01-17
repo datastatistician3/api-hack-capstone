@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-    <script src="script.js"></script>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Clarifai Image Recognition </title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+  <!-- <script type="text/javascript" src="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/wolfram.js"></script> -->
+  <script type="text/javascript" src="predict.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/app.css" /> -->
 </head>
-
 <body>
-    <div class="wrapper">
-      <h1>Identify Food Ingredients!</h1>
-  
-      <form action="#">
-        <input type="file" id="filename" placeholder="Filename" size="100"/>
-        <button id="submit-button" type="submit">Submit to Identify Food Ingredients!</button>
-      </form>
-  
-      <div id="predictions">
-        <div class="food-photo">
-          <div class="step"><span>1</span> Uploaded Image</div>
-          <img id="myImg" src="#" alt="your image" />
-        </div>
-        <div class="nutrition">
-          <div class="step"><span>2</span>Results</div>
-          <div id="concepts"></div>
-        </div>
-      </div>
-    </div>
 
-  </body>
+	<header>
+		<h1>Indentify Food Item and Its Ingredients.</h1>
+	</header>
 
+	<section>
+		<div>
+			<form action="#">
+				<input type="file" id="filename" placeholder="Filename" size="100"/>
+      			<button id="submit-button">Find Food Items and Ingredients</button>
+    		</form>
+		</div>
+	</section>
+
+	<section>
+			  <div>
+				<h2 id="what-food"></h2>
+				<img id="myImg">
+				<h3 id="food-ingredients"></h3>
+				<div id="tbl-food"></div>
+			  </div>
+
+	</section>
+</body>
 </html>

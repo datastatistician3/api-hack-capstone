@@ -3,17 +3,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Clarifai Image Recognition </title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
   <!-- <script type="text/javascript" src="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/wolfram.js"></script> -->
   <script type="text/javascript" src="predict.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/app.css" /> -->
-</head>
+	<!-- <link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/static.mlh.io/blog-code/2018-02-clarifai-nutrition-app/app.css" /> -->
+	
 <body>
 
 	<header>
-		<h1>Indentify Food Item and Its Ingredients.</h1>
+		<h1 class='main' >Indentify Food Item and Its Ingredients.</h1>
 	</header>
 
 	<section>
@@ -28,6 +28,7 @@
 	<section>
 			  <div>
 				<h2 id="what-food"></h2>
+				<h2 id="clickto-show-items"></h2>
 				<img id="myImg">
 				<h3 id="food-ingredients"></h3>
 				<div id="tbl-food"></div>

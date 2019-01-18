@@ -38,7 +38,6 @@ function findFoodItem(){
   $('#submit-button').on('click', function(e){
     let fileName = $('#filename').val();
     submitImage(filename, 'file')
-
     changeImage();   
   })
 }
@@ -48,11 +47,13 @@ function makePrediction(image) {
         let tag = response.outputs[0].data.concepts[0].name;
 
         $('#what-food').html(`<h2>This food is: ${toTitleCase(tag)}</h2>`)
+        // $('#clickto-show-items').html(`<a href="#">Click here to see ingredients!</a>`)
+        $('#clickto-show-items').html(`<h6>Click Image to See Ingredient Level Ddetials</h6>`);
         let manyItems = response.outputs[0].data.concepts;
-        $('#tbl-food').append('<table border="1"><tr><th>Food</th><th>Probability</th></tr></table>');
+        $('#tbl-food').append('<table class="hidden" border="1"><tr><th>Food</th><th>Probability</th></tr></table>');
         var myTable = $('#tbl-food').children();
 
-        $('#food-ingredients').html(`<h3>Below are the ingredients of ${toTitleCase(tag)}</h3>`)
+        $('#food-ingredients').html(`<h3 class="hidden">Below are the ingredients of ${toTitleCase(tag)}</h3>`)
         manyItems.forEach(frame => {
           myTable.append(`<tr><td>${toTitleCase(frame.name)}</td><td>${frame.value.toFixed(4)}</td></tr>`);
         })
@@ -60,5 +61,16 @@ function makePrediction(image) {
     );
 }
 
-// $(getImage)
-$(findFoodItem)
+function toggleClassfunction(){
+  $("#myImg").off("click").on("click", function(e){
+    $("table").toggleClass("hidden");
+  });
+}
+
+
+function runMethods() {
+  $(toggleClassfunction)
+  $(findFoodItem)
+}
+
+$(runMethods)

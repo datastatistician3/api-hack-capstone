@@ -3,3 +3,11 @@ table {
   text-align: left;
   left: 50px;
 }
+
+#myImg {
+  width:20%;
+  height: 40%;
+}
+
+
+.hidden { display: none }

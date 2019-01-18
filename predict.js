@@ -55,7 +55,7 @@ function makePrediction(image) {
 
         $('#food-ingredients').html(`<h3 class="hidden">Below are the ingredients of ${toTitleCase(tag)}</h3>`)
         manyItems.forEach(frame => {
-          myTable.append(`<tr><td>${toTitleCase(frame.name)}</td><td>${frame.value.toFixed(4)}</td></tr>`);
+          myTable.append(`<tr><td>${toTitleCase(frame.name)}</td><td>${(frame.value.toFixed(4)*100).toFixed(2)}%</td></tr>`);
         })
     }).catch(error => console.log(error)
     );

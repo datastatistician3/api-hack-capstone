@@ -6,11 +6,64 @@ table {
   border-collapse: collapse;
   text-align: left;
   margin: auto;
+  background-image: element();
 }
 
+/* input[type="text"], input[type="file"] {
+  cursor: pointer;
+  background-origin: padding-box;
+} */
+
+.input-submit-section {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.input-submit-section input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.input-type {
+  border: 2px solid gray;
+  color: rgb(216, 228, 213);
+  background-color: rgb(159, 48, 48);
+  padding: 6px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#my-header {
+  border: 2px solid gray;
+  color: rgb(1, 3, 0);
+  background-color: rgb(39, 185, 187);
+  padding: 6px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 30%;
+  margin-left:40%;
+}
+
+
+tr:nth-child(even) {
+  background-color: #9ae129;
+}
+
+tr:nth-child(odd) {
+  background-color: #39ae3d;
+}
+
+
+
 #myImg {
-  width:20%;
-  height: 40%;
+  width:25%;
+  height: 50%;
 }
 
 
@@ -19,6 +72,8 @@ table {
 body{
   text-align: center;
   margin: auto;
+  background-color: aquamarine;
+  font-family: sans-serif;
 }
 
 /* #image-and-table{

@@ -13,13 +13,15 @@
 <body>
 
 	<header>
-		<h1 id="my-header" >Indentify Food Item and Its Ingredients.</h1>
+		<p>This is an image recognition application that allows users to upload an image with a food item/items and identifies what food it is and its item level contents.</p>
+		<h1 id="my-header" >Let's Indentify Food Item and What's in It.</h1>
 	</header>
 
 	<section>
 		<div id="input-submit-section">
-				<input type="file" id="filename" placeholder="Filename" size="100"/>
-      	<button id="submit-button">Find Food Items and Ingredients</button>
+				<label for="filename">Upload an Image:</label>
+				<input type="file" id="filename" placeholder="Filename" size="100" class="input-type"/>
+      	<button id="submit-button" class="input-type">Click to See What It Is.</button>
 		</div>
 	</section>
 
@@ -28,7 +30,8 @@
 					<h2 id="what-food"></h2>
 					<h2 id="clickto-show-items"></h2>
 					<div id="image-and-table">
-							<img id="myImg">
+						<input type="image" id="myImg" value="" >
+							<!-- <img id="myImg"> -->
 							<div id="tbl-food"></div>
 					</div>
 			  </div>

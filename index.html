@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Clarifai Image Recognition </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Clarifai Image Recognition </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
-  <script type="text/javascript" src="predict.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-	
+	<script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+	<script type="text/javascript" src="predict.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 <body>
 <div class="container">
 	<header>
 		<p>This is an image recognition application that allows users to upload an image with a food item/items and identifies what food it is and its item level contents.</p>
-		<h1 id="my-header" >Let's Indentify Food Item and What's in It.</h1>
+		<h1 id="my-header" >Let's Identify Food Item and What's in It.</h1>
 	</header>
 
 	<section>
 		<div id="input-submit-section">
-				<!-- <label for="filename">Upload an Image:</label> -->
-				<input type="file" id="filename" placeholder="Filename" size="100" class="input-type"/>
-      	<button id="submit-button" class="input-type">Click to See What It Is.</button><br>
+			<!-- <label for="filename">Upload an Image:</label> -->
+			<input type="file" id="filename" placeholder="Filename" size="100" class="input-type"/>
+      		<button id="submit-button" class="input-type">Click to See What It Is.</button><br>
 		</div>
 	</section>
 
 	<section>
-			  <div id="predictions">
-					<h2 id="what-food"></h2>
-					<h2 id="clickto-show-items"></h2>
-					<div id="image-and-table">
-						<input type="image" id="myImg" value="" >
-							<!-- <img id="myImg"> -->
-							<div id="tbl-food"></div>
-					</div>
-			  </div>
+		<div>
+			<h2 id="what-food"></h2>
+			<h2 id="clickto-show-items"></h2>
+			<div id="image-and-table">
+				<a href="#bottom" id="top"><input type="image" id="myImg" value="" ></a>
+				<div id="tbl-food"></div>
+				<a href="#top" id="bottom"></a>
+			</div>
+		</div>
 	</section>
+
+	<address>
+		<p style="font-size:12px;">Built by <a href="mailto:energeticsom@gmail.com">Som B. Bohora</a> using
+		<a href="https://clarifai.com/" target="_blank"><img id="clarifai-img" src="https://clarifai.com/cms-assets/20180307033326/logo2.svg"" alt="Clarifai"/></a>.</p>
+	</address>
 </div>
 </body>
 </html>

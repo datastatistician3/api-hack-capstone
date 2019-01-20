@@ -51,7 +51,7 @@ function makePrediction(image) {
         // $('#clickto-show-items').html(`<a href="#">Click here to see ingredients!</a>`)
         $('#clickto-show-items').html(`<h5>Click Image to See What's in It.</h5>`);
         let manyItems = response.outputs[0].data.concepts;
-        $('#tbl-food').append(`<table class="hidden" border="1"><caption>Items of <strong>${toTitleCase(tag)}.</strong></caption><br><tr><th>Food</th><th>Probability</th></tr></table>`);
+        $('#tbl-food').append(`<table class="hidden" border="1"><caption>Ingredients of <strong>${toTitleCase(tag)}.</strong></caption><br><tr><th>Food</th><th>Probability</th></tr></table>`);
         var myTable = $('#tbl-food').children();
 
         // $('#food-ingredients').html(`<h3 class="hidden">Below are the items of ${toTitleCase(tag)}</h3>`)
@@ -70,7 +70,6 @@ function toggleClassfunction(){
 }
 
 function runMethods() {
-  // $(toggleClassfunction)
   $(findFoodItem)
 }
 

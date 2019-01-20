@@ -1,12 +1,10 @@
-// var myClarifaiApiKey = 'c4226e96294a4238a5b4fa8ac9aae598';
 const app = new Clarifai.App({ apiKey: 'c4226e96294a4238a5b4fa8ac9aae598' });
 const appModel = 'bd367be194cf45149e75f01d59f77ba7';
 
-const nutrientURL = 'http://api.wolframalpha.com/v2/query?input='
-const nutrientAPI = 'JLHA8Y-3WRLXGJQHY'
+// const nutrientURL = 'http://api.wolframalpha.com/v2/query?input='
+// const nutrientAPI = 'JLHA8Y-3WRLXGJQHY'
 
 // imageLoading = "https://s3.amazonaws.com/static.mlh.io/icons/loading.svg"
-
 // const image = 'https://samples.clarifai.com/food.jpg';
 
 var toTitleCase = function (str) {
@@ -49,9 +47,9 @@ function makePrediction(image) {
   app.models.predict(appModel, image).then(response => {
         let tag = response.outputs[0].data.concepts[0].name;
 
-        $('#what-food').html(`<h2>This food is: ${toTitleCase(tag)}</h2>`)
+        $('#what-food').html(`<br><br><h2>This food is: ${toTitleCase(tag)}</h2>`)
         // $('#clickto-show-items').html(`<a href="#">Click here to see ingredients!</a>`)
-        $('#clickto-show-items').html(`<h6>Click Image to See What's in It.</h6>`);
+        $('#clickto-show-items').html(`<h5>Click Image to See What's in It.</h5>`);
         let manyItems = response.outputs[0].data.concepts;
         $('#tbl-food').append(`<table class="hidden" border="1"><caption>Items of <strong>${toTitleCase(tag)}.</strong></caption><br><tr><th>Food</th><th>Probability</th></tr></table>`);
         var myTable = $('#tbl-food').children();
@@ -70,7 +68,6 @@ function toggleClassfunction(){
     $("#food-ingredients").toggleClass("hidden");
   });
 }
-
 
 function runMethods() {
   // $(toggleClassfunction)

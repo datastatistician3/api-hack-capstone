@@ -134,3 +134,18 @@ html, body {
 #bottom {
   border: none;
 }
+
+
+@media (max-width: 640px){
+  .container {
+    background: rgb(110, 196, 194);
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 30px;
+    width: 400px;
+  }
+
+  html, body, #my-header, #input-submit-section, #filename, #submit-button {
+    font-size: 12px;
+  }
+}
